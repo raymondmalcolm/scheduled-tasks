@@ -16,8 +16,11 @@ import os
 # import os and use it to get the Github repository secrets
 MY_EMAIL = os.environ.get("MY_EMAIL")
 MY_PASSWORD = os.environ.get("MY_PASSWORD")
+TO_EMAIL = os.environ.get("TO_EMAIL)
 
-password = PASSWORD
+my_email = MY_EMAIL
+password = MY_PASSWORD
+to_email = TO_EMAIL
 
 now = dt.datetime.now()
 day_of_week = now.weekday()
@@ -51,7 +54,7 @@ for birthday in birthday_dict:
             connection.starttls()
             connection.login(user=my_email, password=password)
             connection.sendmail(from_addr=my_email, 
-                                to_addrs="ray@malcolm.net", 
+                                to_addrs=to_email, 
                                 msg=f"Subject:Happy Birthday\n\n{letter}"
 
         )

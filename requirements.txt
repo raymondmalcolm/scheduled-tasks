@@ -1,5 +1,4 @@
 datetime
-random
 smtplib
 pandas
 pathlib

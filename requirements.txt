@@ -1,5 +1,2 @@
-datetime
-smtplib
 pandas
-pathlib
 os

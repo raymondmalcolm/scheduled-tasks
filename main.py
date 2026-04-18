@@ -15,7 +15,7 @@ from pathlib import Path
 # import os and use it to get the Github repository secrets
 MY_EMAIL = os.environ.get("MY_EMAIL")
 MY_PASSWORD = os.environ.get("MY_PASSWORD")
-TO_EMAIL = os.environ.get("TO_EMAIL)
+TO_EMAIL = os.environ.get("TO_EMAIL:")
 
 my_email = MY_EMAIL
 password = MY_PASSWORD

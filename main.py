@@ -5,12 +5,12 @@
 # 4. Update birthdays.csv to contain today's month and day.
 # See the solution video in the 100 Days of Python Course for explainations.
 
-import datetime as dt
+import os
 import random
+import datetime as dt
 import smtplib
 import pandas as pd
 from pathlib import Path
-import os
 
 # import os and use it to get the Github repository secrets
 MY_EMAIL = os.environ.get("MY_EMAIL")

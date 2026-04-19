@@ -53,7 +53,7 @@ for birthday in birthday_dict:
             connection.starttls()
             connection.login(user=my_email, password=password)
             connection.sendmail(from_addr=my_email, 
-                                to_addrs=to_email, 
+                                to_addrs=birthday["email"], 
                                 msg=f"Subject:Happy Birthday\n\n{letter}"
 
         )

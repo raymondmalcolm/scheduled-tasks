@@ -43,9 +43,9 @@ for file_path in directory_path.iterdir():
             letters.append(f.read())
 
 for birthday in birthday_dict:
-    if  birthday.get("Day") == now.day and int(birthday["Month"]) == now.month:
+    if  birthday.get("Day") == now.day and int(birthday.get("Month")) == now.month:
         letter = random.choice(letters)
-        letter = letter.replace("[NAME]", birthday["Name"])
+        letter = letter.replace("[NAME]", birthday.get("Name"))
 
         # 4. Send the letter generated in step 3 to that person's email address.
 
@@ -53,7 +53,7 @@ for birthday in birthday_dict:
             connection.starttls()
             connection.login(user=my_email, password=password)
             connection.sendmail(from_addr=my_email, 
-                                to_addrs=birthday["Email"], 
+                                to_addrs=birthday.get("Email"), 
                                 msg=f"Subject:Happy Birthday\n\n{letter}"
 
         )

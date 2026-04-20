@@ -43,7 +43,7 @@ for file_path in directory_path.iterdir():
             letters.append(f.read())
 
 for birthday in birthday_dict:
-    if int(birthday["Month"]) == now.month and int(birthday["Day"]) == now.day:
+    if  int(birthday["Day"]) == now.day and int(birthday["Month"]) == now.month:
         letter = random.choice(letters)
         letter = letter.replace("[NAME]", birthday["Name"])
 
